@@ -1,0 +1,8 @@
+com/klef/soa/docker/dto/FitnessRequest.class
+com/klef/soa/docker/service/FitnessServiceImpl.class
+com/klef/soa/docker/configuration/SwaggerConfig.class
+com/klef/soa/docker/controller/FitnessController.class
+com/klef/soa/docker/CrudServiceProjectApplication.class
+com/klef/soa/docker/repository/FitnessRepository.class
+com/klef/soa/docker/service/FitnessService.class
+com/klef/soa/docker/entity/FitnessEntity.class

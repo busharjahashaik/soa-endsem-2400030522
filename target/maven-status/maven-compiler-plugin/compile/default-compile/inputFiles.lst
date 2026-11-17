@@ -1,0 +1,8 @@
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/CrudServiceProjectApplication.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/configuration/SwaggerConfig.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/controller/FitnessController.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/dto/FitnessRequest.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/entity/FitnessEntity.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/repository/FitnessRepository.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/service/FitnessService.java
+/Users/shaikbusharjaha/Desktop/FitTrack-Docker/backend/src/main/java/com/klef/soa/docker/service/FitnessServiceImpl.java
