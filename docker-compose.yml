@@ -1,0 +1,49 @@
+
+name: fittrack-deployment
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: fittrack-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: bushra09
+      POSTGRES_DB: exam_2400030522
+    volumes:
+      - fittrack_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d exam_2400030522"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - fittrack-network
+
+  backend:
+    image: busharjahashaik/fittrack-backend:latest
+    platform: linux/amd64
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fittrack-backend
+    restart: unless-stopped
+    ports:
+      - "8082:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exam_2400030522
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: bushra09
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - fittrack-network
+
+volumes:
+  fittrack_data:
+
+networks:
+  fittrack-network:
+    driver: bridge
